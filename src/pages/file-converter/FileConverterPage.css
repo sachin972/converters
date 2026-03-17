@@ -1,0 +1,51 @@
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0.75rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.page-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.page-content {
+  min-height: 200px;
+}
+
+.page-content .app {
+  padding-top: 0;
+}
+
+.page-content .header {
+  margin-bottom: 1.5rem;
+}
+
+.page-content .header h1 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 480px) {
+  .page-wrap {
+    padding: 1.5rem 1rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-wrap {
+    padding: 2rem 2rem;
+  }
+
+  .page-title {
+    font-size: 1.625rem;
+  }
+}

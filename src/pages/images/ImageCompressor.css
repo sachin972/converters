@@ -1,0 +1,147 @@
+.image-compressor-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.compressor-preview-area {
+  padding: 1rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.compressor-preview {
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--surface-hover);
+}
+
+.compressor-preview-area .placeholder {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.file-info {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.compressor-options {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.option-label {
+  font-size: 0.875rem;
+  color: var(--text);
+  min-width: 80px;
+}
+
+.option-input {
+  width: 100px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.875rem;
+  font-family: var(--font-mono);
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.option-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.option-range {
+  flex: 1;
+  min-width: 100px;
+  max-width: 180px;
+  accent-color: var(--accent);
+}
+
+.option-select {
+  padding: 0.4rem 0.5rem;
+  font-size: 0.875rem;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.option-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.compressor-actions {
+  padding: 0 1rem 1rem;
+}
+
+.compressor-actions .btn {
+  width: 100%;
+}
+
+.options-panel .error {
+  margin: 0 1rem 1rem;
+}
+
+@media (max-width: 479px) {
+  .option-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .option-range {
+    width: 100%;
+    max-width: none;
+  }
+
+  .option-input {
+    width: 100%;
+    max-width: 140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-compressor-main {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 320px);
+    align-items: start;
+  }
+
+  .image-compressor-main .input-panel {
+    grid-column: 1;
+  }
+
+  .image-compressor-main .options-panel {
+    grid-column: 2;
+  }
+
+  .compressor-preview {
+    max-height: 400px;
+  }
+}
